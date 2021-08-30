@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_ncmc_epic.EpicUtils</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>EpicUtils</name>
+        <script><![CDATA[var EpicUtils = Class.create();
+EpicUtils.prototype = {
+    initialize: function() {},
+    decryptEpicURL: function(input) {
+        var key = gs.getProperty('x_ncmc_epic.EpicCryptURLKey');
+        var iv = input.substring(0, 24);
+        input = input.substring(24, input.length);
+        key = CryptoJS.enc.Base64.parse(key);
+        iv = CryptoJS.enc.Base64.parse(iv);
+        var decrypted = CryptoJS.AES.decrypt(input, key, {
+            iv: iv,
+            mode: CryptoJS.mode.CBC,
+            padding: CryptoJS.pad.Pkcs7
+        });
+        decrypted = new x_ncmc_epic.EpicUtils().hexToAscii(decrypted);
+        return decrypted;
+    },
+    hexToAscii: function(hexValue) {
+        var hex = hexValue.toString();
+        var str = '';
+        for (var n = 0; n < hex.length; n += 2) {
+            str += String.fromCharCode(parseInt(hex.substr(n, 2), 16));
+        }
+        return str;
+    },
+    type: 'EpicUtils'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>CCMC-03</sys_created_by>
+        <sys_created_on>2021-07-09 16:57:08</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>34a411781b19741054cea9f6b04bcbba</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>EpicUtils</sys_name>
+        <sys_package display_value="Epic Integrations" source="x_ncmc_epic">aeb251341bd5741054cea9f6b04bcbbf</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Epic Integrations">aeb251341bd5741054cea9f6b04bcbbf</sys_scope>
+        <sys_update_name>sys_script_include_34a411781b19741054cea9f6b04bcbba</sys_update_name>
+        <sys_updated_by>CCMC-03</sys_updated_by>
+        <sys_updated_on>2021-07-09 17:15:07</sys_updated_on>
+    </sys_script_include>
+</record_update>

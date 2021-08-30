@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="DELETE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_ncmc_epic.EncryptHelper</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>EncryptHelper</name>
+        <script><![CDATA[var EncryptHelper = Class.create();
+EncryptHelper.prototype = {
+    initialize: function() {},
+    hexToAscii: function(hexValue) {
+        var hex = hexValue.toString();
+        var str = '';
+        for (var n = 0; n < hex.length; n += 2) {
+            str += String.fromCharCode(parseInt(hex.substr(n, 2), 16));
+        }
+        return str;
+    },
+    type: 'EncryptHelper'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>CCMC-03</sys_created_by>
+        <sys_created_on>2021-07-09 17:12:49</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>ff959d781b19741054cea9f6b04bcb8f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>EncryptHelper</sys_name>
+        <sys_package display_value="Epic Integrations" source="x_ncmc_epic">aeb251341bd5741054cea9f6b04bcbbf</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Epic Integrations">aeb251341bd5741054cea9f6b04bcbbf</sys_scope>
+        <sys_update_name>sys_script_include_ff959d781b19741054cea9f6b04bcb8f</sys_update_name>
+        <sys_updated_by>CCMC-03</sys_updated_by>
+        <sys_updated_on>2021-07-09 17:12:49</sys_updated_on>
+    </sys_script_include>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Epic Integrations">aeb251341bd5741054cea9f6b04bcbbf</application>
+        <file_path/>
+        <instance_id>e9cd11404fc45a007b9b220f0310c7a2</instance_id>
+        <instance_name>ctchildrensdev</instance_name>
+        <name>sys_script_include_ff959d781b19741054cea9f6b04bcb8f</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_script_include"&gt;&lt;sys_script_include action="INSERT_OR_UPDATE"&gt;&lt;access&gt;package_private&lt;/access&gt;&lt;active&gt;true&lt;/active&gt;&lt;api_name&gt;x_ncmc_epic.EncryptHelper&lt;/api_name&gt;&lt;caller_access/&gt;&lt;client_callable&gt;false&lt;/client_callable&gt;&lt;description/&gt;&lt;name&gt;EncryptHelper&lt;/name&gt;&lt;script&gt;&lt;![CDATA[var EncryptHelper = Class.create();
+EncryptHelper.prototype = {
+    initialize: function() {},
+    hexToAscii: function(hexValue) {
+        var hex = hexValue.toString();
+        var str = '';
+        for (var n = 0; n &lt; hex.length; n += 2) {
+            str += String.fromCharCode(parseInt(hex.substr(n, 2), 16));
+        }
+        return str;
+    },
+    type: 'EncryptHelper'
+};]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_include&lt;/sys_class_name&gt;&lt;sys_created_by&gt;CCMC-03&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-07-09 17:12:49&lt;/sys_created_on&gt;&lt;sys_customer_update&gt;false&lt;/sys_customer_update&gt;&lt;sys_id&gt;ff959d781b19741054cea9f6b04bcb8f&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;EncryptHelper&lt;/sys_name&gt;&lt;sys_package display_value="Epic Integrations" source="x_ncmc_epic"&gt;aeb251341bd5741054cea9f6b04bcbbf&lt;/sys_package&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_replace_on_upgrade&gt;false&lt;/sys_replace_on_upgrade&gt;&lt;sys_scope display_value="Epic Integrations"&gt;aeb251341bd5741054cea9f6b04bcbbf&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_include_ff959d781b19741054cea9f6b04bcb8f&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;CCMC-03&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-07-09 17:12:49&lt;/sys_updated_on&gt;&lt;/sys_script_include&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>2087578322</payload_hash>
+        <record_name>EncryptHelper</record_name>
+        <reverted_from/>
+        <source>6eb295341b19741054cea9f6b04bcbcc</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>CCMC-03</sys_created_by>
+        <sys_created_on>2021-07-09 17:12:49</sys_created_on>
+        <sys_id>2898553c1b19741054cea9f6b04bcbb9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17a8c41ef030000001</sys_recorded_at>
+        <sys_updated_by>CCMC-03</sys_updated_by>
+        <sys_updated_on>2021-07-09 17:12:49</sys_updated_on>
+        <type>Script Include</type>
+        <update_guid>2098553c231974106ee4ff75552fa4b9</update_guid>
+        <update_guid_history>2098553c231974106ee4ff75552fa4b9:2087578322</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>CCMC-03</sys_created_by>
+        <sys_created_on>2021-07-09 17:15:18</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_db_object display_value="" name="sys_script_include">sys_script_include</sys_db_object>
+        <sys_id>119b166aa8be471082d40260847dc440</sys_id>
+        <sys_metadata>ff959d781b19741054cea9f6b04bcb8f</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>EncryptHelper</sys_name>
+        <sys_package display_value="Epic Integrations" source="x_ncmc_epic">aeb251341bd5741054cea9f6b04bcbbf</sys_package>
+        <sys_parent/>
+        <sys_policy>read</sys_policy>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Epic Integrations">aeb251341bd5741054cea9f6b04bcbbf</sys_scope>
+        <sys_scope_delete display_value="">38d15b6f17f940c89a832327a5bd8791</sys_scope_delete>
+        <sys_update_name>sys_script_include_ff959d781b19741054cea9f6b04bcb8f</sys_update_name>
+        <sys_update_version display_value="sys_script_include_ff959d781b19741054cea9f6b04bcb8f">2898553c1b19741054cea9f6b04bcbb9</sys_update_version>
+        <sys_updated_by>CCMC-03</sys_updated_by>
+        <sys_updated_on>2021-07-09 17:15:18</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
